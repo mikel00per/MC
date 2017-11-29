@@ -1,15 +1,14 @@
-
+</html>
 <center>
 <h1>Practicas durante el curso</h1>
 <br></br><br></br><br></br>
-
 <h2>Modelos de Cómputación</h2>
 <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
 <h3>20 Noviembre de 2017</h3>
 <h4>Realizado por: Antonio Miguel Morillo Chica</h4>
 </center>
 <br></br><br></br><br></br><br></br><br></br><br></br>
-
+</html>
 
 
 # 1. Practica 1

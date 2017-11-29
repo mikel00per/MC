@@ -1,13 +1,11 @@
 <html>
-<center>
   <h1 style="text-align:center">Practicas durante el curso</h1>
   <br></br><br></br><br></br>
   <h2 style="text-align:center">Modelos de Cómputación</h2>
   <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
   <h3 style="text-align:center">22 noviembre de 2017</h3>
   <h4 style="text-align:center">Realizado por: Antonio Miguel Morillo Chica</h4>
-</center>
-<br></br><br></br><br></br><br></br><br></br><br></br>
+  <br></br>
 <html>
 
 

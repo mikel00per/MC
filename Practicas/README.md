@@ -1,14 +1,3 @@
-<html>
-  <h1 style="text-align:center">Practicas durante el curso</h1>
-  <br></br><br></br><br></br>
-  <h2 style="text-align:center">Modelos de Cómputación</h2>
-  <br></br><br></br><br></br><br></br><br></br><br></br><br></br>
-  <h3 style="text-align:center">22 noviembre de 2017</h3>
-  <h4 style="text-align:center">Realizado por: Antonio Miguel Morillo Chica</h4>
-  <br></br>
-<html>
-
-
 # 1. Practica 1
 Determinar si la gramática G = ({S,A,B}, {a,b,c,a}, P, S) donde P es el
 conjunto de reglas de producción:
@@ -42,11 +31,6 @@ funciona correctamente.
 
 
 # 4. Practica 4
-
-
-* * * * *
-
-# 5. Practica 5x
 
 
 * * * * *

@@ -12,7 +12,7 @@ ADF que reconoce cadenas..
 * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 ## Pregunta 2 | Lema del bombeo
-Demuestra que el siguiente lenguaje no es regular: {0^j,1^i / j>=0}
+Demuestra que el siguiente lenguaje no es regular: {0^j 1^i / j>=0}
 
     Sin hacer aún.
 

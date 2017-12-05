@@ -11,10 +11,18 @@ conjunto de reglas de producción:
 Genera un lenguaje de tipo 3, ¿es regular?
 
 ## 1.1. Solución
-Lo
+Antes de nada podemos ver que las reglas de la gramatica:
+  - B -> cB
+  - B -> d
+  - A -> a
+Son de tipo 3, pero las dos restantes no, por lo que deberemos modificarlas.
 
 Lo primero que deberemos hacer es determinar L, el lenguaje que genera
-la gramatica anterior.
+la gramatica anterior usando sus producciones.
+
+  S -> AB le podemos aplicar la producción **5** ó **3**:
+    - S -> AB -> aB
+    - S -> AB -> AbB
 
 * * * * *
 

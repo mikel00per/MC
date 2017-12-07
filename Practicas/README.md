@@ -122,7 +122,7 @@ funciona correctamente.
 ## 3.1. Solución
 El código lex empleado es el siguien:
 
-~~~~
+``` [lex]
   car		[a-zA-Z]
   digito		[0-9]
   signo		(\-|\+)
@@ -145,7 +145,7 @@ El código lex empleado es el siguien:
   yywrap()
   	{printf("Numero de Enteros%d, reales%d, ident%d, \
   		Suma de Enteros %d",ent,real,ident,sumaent);return 1;}
-~~~~
+```
 
 Lo que deberemos hacer con el código es:
   - Crear un fichero "ejemplo" con el código.

@@ -5,7 +5,7 @@ ADF que reconoce cadenas..
 
   - a) Con un número par de 0 y 1.
   - b) Expresión regular
-  - c) AFD para cadenas del b)
+  - c) AFND para cadenas del b)
 
     Sin hacer aún.
 

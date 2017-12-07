@@ -3,11 +3,11 @@
 Determinar si la gramática G = ({S,A,B}, {a,b,c,d}, P, S) donde P es el
 conjunto de reglas de producción:
 
-  - S -> AB (1)
-  - B -> cB (2)
-  - A -> Ab (3)
-  - B -> d (4)  
-  - A -> a (5)  
+  - S → AB (1)
+  - B → cB (2)
+  - A → Ab (3)
+  - B → d (4)  
+  - A → a (5)  
 
 Genera un lenguaje de tipo 3, ¿es regular?
 
@@ -16,22 +16,22 @@ Genera un lenguaje de tipo 3, ¿es regular?
 Lo primero que deberemos hacer es determinar L, el lenguaje que genera
 la gramatica anterior usando sus producciones.
 
-S -> AB le podemos aplicar la producción 5) ó 3):
+S → AB le podemos aplicar la producción 5) ó 3):
 
-  - S -> AB -> aB
-  - S -> AB -> AbB
+  - S → AB → aB
+  - S → AB → AbB
 
 Tras esto a ambas producciones si le aplicamos respectivamente las producciones
 2) 4) y 2) 3) 4) 5) respectivamente, así lo que ocurriría sería:
 
   - Con el primer caso:
-    - S -> AB -> aB -> acB      // La usaremos
-    - S -> AB -> aB -> ad       // Final, todos terminales.
+    - S → AB → aB → acB      // La usaremos
+    - S → AB → aB → ad       // Final, todos terminales.
   - Con el segundo caso:
-    - S -> AB -> AbB -> AbcB    // La usaremos
-    - S -> AB -> AbB -> AbbB    // La usaremos
-    - S -> AB -> AbB -> Abd     // La usaremos
-    - S -> AB -> AbB -> abB     // Misma producción que antes por lo que no
+    - S → AB → AbB → AbcB    // La usaremos
+    - S → AB → AbB → AbbB    // La usaremos
+    - S → AB → AbB → Abd     // La usaremos
+    - S → AB → AbB → abB     // Misma producción que antes por lo que no
                                 // seguiremos por aquí.
 
 La variable A siembre será sustituida por el simbolo terminal A o por Ab, lo
@@ -43,14 +43,14 @@ Volvemos a aplicar producciones para ver los resultados, como sé lo que va a
 pasar con la variable A, no hago producciones con ella, solo con B:
 
   - Con el primer caso:
-    - S -> AB -> aB -> acB -> accB
-    - S -> AB -> aB -> acB -> acd
+    - S → AB → aB → acB → accB
+    - S → AB → aB → acB → acd
 
   - Con el segundo caso:
-    - S -> AB -> AbB -> AbcB -> AbccB
-    - S -> AB -> AbB -> AbcB -> Abcd
-    - S -> AB -> AbB -> AbbB -> AbbcB
-    - S -> AB -> AbB -> AbbB -> Abbd
+    - S → AB → AbB → AbcB → AbccB
+    - S → AB → AbB → AbcB → Abcd
+    - S → AB → AbB → AbbB → AbbcB
+    - S → AB → AbB → AbbB → Abbd
 
 Como podemos ver sabemos que, siempre comenzará por A y de la misma forma,
 siempre ha de acabar por una d, es decir, estos dis simbolos siempre van a
@@ -66,34 +66,52 @@ el simbolo terminal "a" a la izquerda y una variable "B" por ejemplo que usaremo
 para seguir producciendo la sucesión de b's y c's además de poder poner d. Así
 con S tendríamos:
 
-    - S -> aB
+  - S → aB
 
 Para poder tener tener b^i veces usaremos:
-    - B -> bB
+  - B → bB
 
 Para poder tener c^j veces usaremos dos producciones, una para cambiar la
 B de la producción anterior a C y así generar C's o para terminar.
-    - B -> C
-    - C -> cC
+  - B → C
+  - C → cC
 
 Para poder poner el simbolo terminal d usaremos una última producción:
-    - C -> d
+  - C → d
 
 Por lo que la gramática de tipo 3 sería la siguiente:
-    S -> aB
-    B -> bB
-    B -> C
-    C -> cC
-    C -> d
+    S → aB
+    B → bB
+    B → C
+    C → cC
+    C → d
 
 * * * * *
 
-# 2. Practica 2
-Implemente con jFlash un automata determinista aportandole a la herramienta un
+# 2. Practica 2 | AD → AND con jFlap
+Implemente con jFlap un automata determinista aportandole a la herramienta un
 autómatá no determinista, además hacerlo también con un autómata con
 transiciones nulas.
 
 ## 2.1. Solución
+Los autómatas que he elegido de las transparencias de teoría para implementar
+en jFlap son:
+
+  - AD sin transiciones nulas, acepta cadena con la subcadena 010010.
+
+  ![AFD][]
+
+Usando jFlap el resultado sería el siguiente:
+
+  ![AFND][]
+
+  - Con transiciones nulas:
+
+  ![AFDTN][]
+
+Usando jFlap el resultado sería el siguiente:
+
+  ![AFNDTN][]
 
  * * * * *
 
@@ -105,7 +123,7 @@ funciona correctamente.
 
 * * * * *
 
-# 4. Practica 4 | A.P -> Gramática
+# 4. Practica 4 | A.P → Gramática
 Obtener la gramatica libre del contexto del autómata con pila vacia siendo:
     M = ({q1,q2}, {0,1}, {R,X}, δ, q1, R, 0)
     L={0^i 1^i : i≥0}

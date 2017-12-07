@@ -2,11 +2,11 @@
 Determinar si la gramática G = ({S,A,B}, {a,b,c,d}, P, S) donde P es el
 conjunto de reglas de producción:
 
-  - S -> AB
-  - B -> cB
-  - A -> Ab
-  - B -> d
-  - A -> a
+  - 1) S -> AB
+  - 2) B -> cB
+  - 3) A -> Ab
+  - 4) B -> d  
+  - 5) A -> a  
 
 Genera un lenguaje de tipo 3, ¿es regular?
 
@@ -20,9 +20,76 @@ Son de tipo 3, pero las dos restantes no, por lo que deberemos modificarlas.
 Lo primero que deberemos hacer es determinar L, el lenguaje que genera
 la gramatica anterior usando sus producciones.
 
-  S -> AB le podemos aplicar la producción **5** ó **3**:
+  S -> AB le podemos aplicar la producción 5) ó 3):   
     - S -> AB -> aB
     - S -> AB -> AbB
+
+Tras esto a ambas producciones si le aplicamos respectivamente las producciones
+2) 4) y 2) 3) 4) 5) respectivamente, así lo que ocurriría sería:
+
+  - Con el primer caso:
+    - S -> AB -> aB -> acB      // La usaremos
+    - S -> AB -> aB -> ad       // Final, todos terminales.
+  - Con el segundo caso:
+    - S -> AB -> AbB -> AbcB    // La usaremos
+    - S -> AB -> AbB -> AbbB    // La usaremos
+    - S -> AB -> AbB -> Abd     // La usaremos
+    - S -> AB -> AbB -> abB     // Misma producción que antes por lo que no
+                                // seguiremos por aquí.
+
+La variable A siembre será sustituida por el simbolo terminal A o por Ab, lo
+que quiere decir que con A solo producciremos o una A o una b que irá precedida
+por una A por lo que sabemos que el lenguaje siempre tendrá como mínimo
+una "a" al comenzar y seguida por una cantidad de b superior.
+
+Volvemos a aplicar producciones para ver los resultados, como sé lo que va a
+pasar con la variable A, no hago producciones con ella, solo con B:
+
+  - Con el primer caso:
+    - S -> AB -> aB -> acB -> accB
+    - S -> AB -> aB -> acB -> acd
+  - Con el segundo caso:
+    - S -> AB -> AbB -> AbcB -> AbccB
+    - S -> AB -> AbB -> AbcB -> Abcd
+    - S -> AB -> AbB -> AbbB -> AbbcB
+    - S -> AB -> AbB -> AbbB -> Abbd
+
+Como podemos ver sabemos que, siempre comenzará por A y de la misma forma,
+siempre ha de acabar por una d, es decir, estos dis simbolos siempre van a
+aparecer en todas las producciones. En cambio el número de b's y c's es variable
+puede haber más simbolos de c que de b y viceversa, e incluso no haber uso
+de ellos como hemos visto en una de las producciones que nos quedaba "ad".
+
+Puedo afirmar pues que el lenguaje generado es:
+
+    {ab^ic^jd : 0<=i<=j i,j ∈ N}
+
+Ahora para terminar deberemos de genera una gramática de tipo 3 que pueda generar
+el lenguaje anterior. La primera producción con S debería dejarnos como mínimo
+el simbolo terminal "a" a la izquerda y una variable "B" por ejemplo que usaremos
+para seguir producciendo la sucesión de b's y c's además de poder poner d. Así
+con S tendríamos:
+
+  - S -> aB
+
+Para poder tener tener b^i veces usaremos:
+  - B -> bB
+
+Para poder tener c^j veces usaremos dos producciones, una para cambiar la
+B de la producción anterior a C y así generar C's o para terminar.
+
+  - B -> C
+  - C -> cC
+
+Para poder poner el simbolo terminal d usaremos una última producción:
+  - C -> d
+
+Por lo que la gramática de tipo 3 sería la siguiente:
+    S -> aB
+    B -> bB
+    B -> C
+    C -> cC
+    C -> d
 
 * * * * *
 

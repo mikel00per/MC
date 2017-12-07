@@ -115,7 +115,7 @@ Usando jFlap el resultado sería el siguiente:
 
  * * * * *
 
-# 3. Practica 3
+# 3. Practica 3 | Lex (Expresiones regulares)
 Crear un fichero Lex con código mostrado en el tema dos y comprobar que
 funciona correctamente.
 
@@ -153,8 +153,11 @@ Lo que deberemos hacer con el código es:
   - Compilar el programa que crea lex: $ gcc lex.yy.c -o prog -ll
   - Ejecutar el programa: $ ./prog < Entrada > Salida
 
-    NOTA: Si usais flex en lugar de lex quizás tendreis que cambiar las
+    **NOTA**: Si usais flex en lugar de lex quizás tendreis que cambiar las
     opciones de compilación: gcc lex.yy.c -o prog -lfl
+
+Ahora nuestro fichero de ejemplo va a ser:
+
 
 
 * * * * *

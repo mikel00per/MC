@@ -120,6 +120,42 @@ Crear un fichero Lex con código mostrado en el tema dos y comprobar que
 funciona correctamente.
 
 ## 3.1. Solución
+El código lex empleado es el siguien:
+
+~~~~
+  car		[a-zA-Z]
+  digito		[0-9]
+  signo		(\-|\+)
+  suc		({digito}+)
+  enter		({signo}?{suc})
+  real1		({enter}\.{digito}*)
+  real2		({signo}?\.{suc})
+  	int ent=0, real=0, ident=0, sumaent=0;
+  %%
+
+  	int i;
+  {enter}			{ent++;sscanf(yytext,"%d",&i); sumaent +=i;
+  			printf("Numero entero %s\n",yytext);}
+  ({real1}|{real2})	{real++; printf("Num. real%s\n",yytext);}
+  {car}({car}|{digito})*	{ident++; printf("Var. ident.%s\n", yytext);}
+  .|\n			{;}
+
+  %%
+
+  yywrap()
+  	{printf("Numero de Enteros%d, reales%d, ident%d, \
+  		Suma de Enteros %d",ent,real,ident,sumaent);return 1;}
+~~~~
+
+Lo que deberemos hacer con el código es:
+  - Crear un fichero "ejemplo" con el código.
+  - Ejecutar lex con el fichero creado: $ lex ejemplo
+  - Compilar el programa que crea lex: $ gcc lex.yy.c -o prog -ll
+  - Ejecutar el programa: $ ./prog < Entrada > Salida
+
+    NOTA: Si usais flex en lugar de lex quizás tendreis que cambiar las
+    opciones de compilación: gcc lex.yy.c -o prog -lfl
+
 
 * * * * *
 
@@ -127,7 +163,7 @@ funciona correctamente.
 Obtener la gramatica libre del contexto del autómata con pila vacia siendo:
 
     M = ({q1,q2}, {0,1}, {R,X}, δ, q1, R, 0)
-    
+
     L={0^i 1^i : i≥0}
 
     δ(q1,0,R) = {(q1,XR)}

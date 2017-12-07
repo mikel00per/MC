@@ -125,7 +125,9 @@ funciona correctamente.
 
 # 4. Practica 4 | A.P → Gramática
 Obtener la gramatica libre del contexto del autómata con pila vacia siendo:
+
     M = ({q1,q2}, {0,1}, {R,X}, δ, q1, R, 0)
+    
     L={0^i 1^i : i≥0}
 
     δ(q1,0,R) = {(q1,XR)}

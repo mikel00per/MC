@@ -99,19 +99,19 @@ en jFlap son:
 
   - AD sin transiciones nulas, acepta cadena con la subcadena 010010.
 
-  ![AFD][https://github.com/mikel00per/MC/blob/master/Practicas/AFD.png]
+  ![AFD](https://github.com/mikel00per/MC/blob/master/Practicas/AFD.png)
 
 Usando jFlap el resultado sería el siguiente:
 
-  ![AFND][https://github.com/mikel00per/MC/blob/master/Practicas/AFND.png]
+  ![AFND](https://github.com/mikel00per/MC/blob/master/Practicas/AFND.png)
 
   - Con transiciones nulas:
 
-  ![AFDTN][https://github.com/mikel00per/MC/blob/master/Practicas/AFDTN.png]
+  ![AFDTN](https://github.com/mikel00per/MC/blob/master/Practicas/AFDTN.png)
 
 Usando jFlap el resultado sería el siguiente:
 
-  ![AFNDTN][https://github.com/mikel00per/MC/blob/master/Practicas/AFNDTN.png]
+  ![AFNDTN](https://github.com/mikel00per/MC/blob/master/Practicas/AFNDTN.png)
 
  * * * * *
 

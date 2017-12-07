@@ -2,27 +2,22 @@
 Determinar si la gramática G = ({S,A,B}, {a,b,c,d}, P, S) donde P es el
 conjunto de reglas de producción:
 
-  - 1) S -> AB
-  - 2) B -> cB
-  - 3) A -> Ab
-  - 4) B -> d  
-  - 5) A -> a  
+  1) S -> AB
+  2) B -> cB
+  3) A -> Ab
+  4) B -> d  
+  5) A -> a  
 
 Genera un lenguaje de tipo 3, ¿es regular?
 
 ## 1.1. Solución
-Antes de nada podemos ver que las reglas de la gramatica:
-  - B -> cB
-  - B -> d
-  - A -> a
-Son de tipo 3, pero las dos restantes no, por lo que deberemos modificarlas.
-
 Lo primero que deberemos hacer es determinar L, el lenguaje que genera
 la gramatica anterior usando sus producciones.
 
-  S -> AB le podemos aplicar la producción 5) ó 3):   
-    - S -> AB -> aB
-    - S -> AB -> AbB
+S -> AB le podemos aplicar la producción 5) ó 3):
+
+  - S -> AB -> aB
+  - S -> AB -> AbB
 
 Tras esto a ambas producciones si le aplicamos respectivamente las producciones
 2) 4) y 2) 3) 4) 5) respectivamente, así lo que ocurriría sería:
@@ -48,6 +43,7 @@ pasar con la variable A, no hago producciones con ella, solo con B:
   - Con el primer caso:
     - S -> AB -> aB -> acB -> accB
     - S -> AB -> aB -> acB -> acd
+
   - Con el segundo caso:
     - S -> AB -> AbB -> AbcB -> AbccB
     - S -> AB -> AbB -> AbcB -> Abcd
@@ -58,9 +54,7 @@ Como podemos ver sabemos que, siempre comenzará por A y de la misma forma,
 siempre ha de acabar por una d, es decir, estos dis simbolos siempre van a
 aparecer en todas las producciones. En cambio el número de b's y c's es variable
 puede haber más simbolos de c que de b y viceversa, e incluso no haber uso
-de ellos como hemos visto en una de las producciones que nos quedaba "ad".
-
-Puedo afirmar pues que el lenguaje generado es:
+de ellos como hemos visto en una de las producciones que nos quedaba "ad". Puedo afirmar pues que el lenguaje generado es:
 
     {ab^ic^jd : 0<=i<=j i,j ∈ N}
 
@@ -77,7 +71,6 @@ Para poder tener tener b^i veces usaremos:
 
 Para poder tener c^j veces usaremos dos producciones, una para cambiar la
 B de la producción anterior a C y así generar C's o para terminar.
-
   - B -> C
   - C -> cC
 

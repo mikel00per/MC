@@ -1,16 +1,18 @@
-# 1. Practica 1
+# 1. Practica 1 | Obtimizando gramáticas
+
 Determinar si la gramática G = ({S,A,B}, {a,b,c,d}, P, S) donde P es el
 conjunto de reglas de producción:
 
-  1) S -> AB
-  2) B -> cB
-  3) A -> Ab
-  4) B -> d  
-  5) A -> a  
+  - S -> AB (1)
+  - B -> cB (2)
+  - A -> Ab (3)
+  - B -> d (4)  
+  - A -> a (5)  
 
 Genera un lenguaje de tipo 3, ¿es regular?
 
 ## 1.1. Solución
+
 Lo primero que deberemos hacer es determinar L, el lenguaje que genera
 la gramatica anterior usando sus producciones.
 
@@ -64,18 +66,18 @@ el simbolo terminal "a" a la izquerda y una variable "B" por ejemplo que usaremo
 para seguir producciendo la sucesión de b's y c's además de poder poner d. Así
 con S tendríamos:
 
-  - S -> aB
+    - S -> aB
 
 Para poder tener tener b^i veces usaremos:
-  - B -> bB
+    - B -> bB
 
 Para poder tener c^j veces usaremos dos producciones, una para cambiar la
 B de la producción anterior a C y así generar C's o para terminar.
-  - B -> C
-  - C -> cC
+    - B -> C
+    - C -> cC
 
 Para poder poner el simbolo terminal d usaremos una última producción:
-  - C -> d
+    - C -> d
 
 Por lo que la gramática de tipo 3 sería la siguiente:
     S -> aB

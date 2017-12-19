@@ -22,22 +22,21 @@ S → AB le podemos aplicar la producción 5) ó 3):
   - S → AB → AbB
 
 Tras esto a ambas producciones si le aplicamos respectivamente las producciones
-2) 4) y 2) 3) 4) 5) respectivamente, así lo que ocurriría sería:
+2) 4) y 2) 3) 4) 5) lo que ocurriría serría:
 
   - Con el primer caso:
     - S → AB → aB → acB      // La usaremos
     - S → AB → aB → ad       // Final, todos terminales.
+
   - Con el segundo caso:
     - S → AB → AbB → AbcB    // La usaremos
     - S → AB → AbB → AbbB    // La usaremos
     - S → AB → AbB → Abd     // La usaremos
     - S → AB → AbB → abB     // Misma producción que antes por lo que no
-                                // seguiremos por aquí.
+                             // seguiremos por aquí.
 
 La variable A siembre será sustituida por el simbolo terminal A o por Ab, lo
-que quiere decir que con A solo producciremos o una A o una b que irá precedida
-por una A por lo que sabemos que el lenguaje siempre tendrá como mínimo
-una "a" al comenzar y seguida por una cantidad de b superior.
+que quiere decir que con A solo producciremos o otra A o una b que irá precedida por una A por lo que sabemos que el lenguaje siempre tendrá como mínimo una "a" al comenzar y seguida por una cantidad de b superior.
 
 Volvemos a aplicar producciones para ver los resultados, como sé lo que va a
 pasar con la variable A, no hago producciones con ella, solo con B:
@@ -52,19 +51,11 @@ pasar con la variable A, no hago producciones con ella, solo con B:
     - S → AB → AbB → AbbB → AbbcB
     - S → AB → AbB → AbbB → Abbd
 
-Como podemos ver sabemos que, siempre comenzará por A y de la misma forma,
-siempre ha de acabar por una d, es decir, estos dis simbolos siempre van a
-aparecer en todas las producciones. En cambio el número de b's y c's es variable
-puede haber más simbolos de c que de b y viceversa, e incluso no haber uso
-de ellos como hemos visto en una de las producciones que nos quedaba "ad". Puedo afirmar pues que el lenguaje generado es:
+Como podemos ver sabemos que, siempre comenzará por A y de la misma forma, siempre ha de acabar por una d, es decir, estos dis simbolos siempre van a aparecer en todas las producciones. En cambio el número de b's y c's es variable puede haber más simbolos de c que de b y viceversa, e incluso no haber uso de ellos como hemos visto en una de las producciones que nos quedaba "ad". Puedo afirmar pues que el lenguaje generado es:
 
     {ab^ic^jd : 0<=i<=j i,j ∈ N}
 
-Ahora para terminar deberemos de genera una gramática de tipo 3 que pueda generar
-el lenguaje anterior. La primera producción con S debería dejarnos como mínimo
-el simbolo terminal "a" a la izquerda y una variable "B" por ejemplo que usaremos
-para seguir producciendo la sucesión de b's y c's además de poder poner d. Así
-con S tendríamos:
+Ahora para terminar deberemos de genera una gramática de tipo 3 que pueda generar el lenguaje anterior. La primera producción con S debería dejarnos como mínimo el simbolo terminal "a" a la izquerda y una variable "B" por ejemplo que usaremos para seguir producciendo la sucesión de b's y c's, además de poder poner d. Así con S tendríamos:
 
   - S → aB
 
@@ -120,7 +111,7 @@ Crear un fichero Lex con código mostrado en el tema dos y comprobar que
 funciona correctamente.
 
 ## 3.1. Solución
-El código lex empleado es el siguien:
+El código lex empleado es el siguiente:
 
 ``` [lex]
   car     [a-zA-Z]
@@ -155,9 +146,7 @@ Lo que deberemos hacer con el código es:
     **NOTA**: Si usais flex en lugar de lex quizás tendreis que cambiar las
     opciones de compilación: gcc lex.yy.c -o prog -lfl
 
-Ahora nuestro fichero de ejemplo va a ser:
-
-
+Ahora nuestro fichero de ejemplo puede ser una lista de productos con su cantidad de kilos del tipo: "naranjas: 50kg", así podríamos contabilizar la cantidad de kg para una lista de productos enorme que puede tener una multinacional, supermercado etc.
 
 * * * * *
 
@@ -201,21 +190,25 @@ forma: δ(q2,ε,R) = {(q1,R)}
   - δ(q2,ε,R) = {(q1,R)}
     - [q2,R,q1] → [q1,R,q1]
     - [q2,R,q2] → [q2,R,q2]
+
   - δ(q1,0,R) = {(q1,XR)}
     - [q1,R,q1] → 0[q1,X,q1] [q1,R,q1]
     - [q1,R,q1] → 0[q1,X,q2] [q2,R,q1]
     - [q1,R,q2] → 0[q1,X,q1] [q1,R,q2]
     - [q1,R,q2] → 0[q1,X,q2] [q2,R,q2]
+
   - δ(q1,1,R) = {(q2,XR)}
     - [q1,R,q2] → 1[q1,X,q1] [q1,R,q2]
     - [q1,R,q2] → 1[q1,X,q2] [q2,R,q2]
     - [q1,R,q1] → 1[q1,X,q1] [q1,R,q1]
     - [q1,R,q1] → 1[q1,X,q2] [q2,R,q1]
+
   - δ(q1,0,X) = {(q1,XX)}
     - [q1,x,q1] → 0[q1,X,q1] [q1,X,q1]
     - [q1,x,q1] → 0[q1,X,q2] [q2,X,q1]
     - [q1,x,q2] → 0[q1,X,q1] [q1,X,q2]
     - [q1,x,q2] → 0[q1,X,q2] [q2,X,q2]
+
   - δ(q2,1,X) = {(q2,XX)}
     - [q2,x,q2] → 1[q2,X,q2] [q2,X,q2]
     - [q2,x,q2] → 1[q2,X,q1] [q1,X,q2]

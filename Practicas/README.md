@@ -138,7 +138,7 @@ El código lex empleado es el siguiente:
 ```
 
 Lo que deberemos hacer con el código es:
-  - Crear un fichero "ejemplo" con el código.
+  - Crear un fichero "codigo" con el código.
   - Ejecutar lex con el fichero creado: $ lex ejemplo
   - Compilar el programa que crea lex: $ gcc lex.yy.c -o prog -ll
   - Ejecutar el programa: $ ./prog < Entrada > Salida
@@ -146,7 +146,28 @@ Lo que deberemos hacer con el código es:
     **NOTA**: Si usais flex en lugar de lex quizás tendreis que cambiar las
     opciones de compilación: gcc lex.yy.c -o prog -lfl
 
-Ahora nuestro fichero de ejemplo puede ser una lista de productos con su cantidad de kilos del tipo: "naranjas: 50kg", así podríamos contabilizar la cantidad de kg para una lista de productos enorme que puede tener una multinacional, supermercado etc.
+Mi fichero de ejemplo será una sucesión de productos a las que llamo "algo" y sobre las que expreso como número enteros la cantidad de kilos y en decimal el precio del quilo de ese "algo", así pues, mi fichero es el siguiente:
+
+    algo1 50 kg -> 1.3 €/kg
+    algo2 100 kg -> 1.2 €/kg
+    algo3 200 kg -> 1.1 €/kg
+    algo4 120 kg -> 1.8 €/kg
+    algo5 120 kg -> 1.9 €/kg
+    algo6 20 kg -> 0.32 €/kg
+    algo7 40 kg -> 1.34 €/kg
+    algo8 40 kg -> 2.35 €/kg
+    algo9 50 kg -> 4.45 €/kg
+    algo10 32 kg -> 5.67 €/kg
+    algo11 28 kg -> 1.81 €/kg
+    algo12 50 kg -> 0.73 €/kg
+    algo13 20 kg -> 4.53 €/kg
+    algo14 28 kg -> 1.21 €/kg
+    algo15 39 kg -> 5.23 €/kg
+
+Con este fichero la salida sería la siguiente:
+
+  ![salida_lex](http://)
+
 
 * * * * *
 

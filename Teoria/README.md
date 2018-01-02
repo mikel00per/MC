@@ -9,14 +9,14 @@ ADF que reconoce cadenas..
 
     Sin hacer aún.
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 ## Pregunta 2 | Lema del bombeo
 Demuestra que el siguiente lenguaje no es regular: {0^j 1^i / j>=0}
 
     Sin hacer aún.
 
-* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 
 ## Pregunta 3
 Formula para {a^i b^j / 0 <= i <= j} y mostrar ejemplos de uso para generar

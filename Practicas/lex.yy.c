@@ -1761,5 +1761,5 @@ void yyfree (void * ptr )
 
 yywrap()
 	{printf("Numero de Enteros%d, reales%d, ident%d, \
-		Suma de Enteros %d",ent,real,ident,sumaent);return 1;}
+		Suma de Enteros %d\n",ent,real,ident,sumaent);return 1;}
 

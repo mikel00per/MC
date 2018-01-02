@@ -166,7 +166,7 @@ Mi fichero de ejemplo será una sucesión de productos a las que llamo "algo" y 
 
 Con este fichero la salida sería la siguiente:
 
-  ![salida_lex](http://)
+  ![salida_lex](https://github.com/mikel00per/MC/blob/master/Practicas/salida_lex.png)
 
 
 * * * * *

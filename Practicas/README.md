@@ -1,4 +1,4 @@
-# 1. Practica 1 | Optimizando gramáticas
+# 1. Práctica 1 | Optimizando gramáticas
 
 Determinar si la gramática G = ({S,A,B}, {a,b,c,d}, P, S) donde P es el
 conjunto de reglas de producción:
@@ -79,7 +79,7 @@ Por lo que la gramática de tipo 3 sería la siguiente:
 
 * * * * *
 
-# 2. Practica 2 | AD → AND con jFlap
+# 2. Práctica 2 | AD → AND con jFlap
 Implemente con jFlap un automata determinista aportandole a la herramienta un
 autómatá no determinista, además hacerlo también con un autómata con
 transiciones nulas.
@@ -90,23 +90,23 @@ en jFlap son:
 
   - AD sin transiciones nulas, acepta cadena con la subcadena 010010.
 
-  ![AFD](https://github.com/mikel00per/MC/blob/master/Practicas/AFD.png)
+  ![AFD](https://github.com/mikel00per/MC/blob/master/Prácticas/AFD.png)
 
 Usando jFlap el resultado sería el siguiente:
 
-  ![AFND](https://github.com/mikel00per/MC/blob/master/Practicas/AFND.png)
+  ![AFND](https://github.com/mikel00per/MC/blob/master/Prácticas/AFND.png)
 
   - Con transiciones nulas:
 
-  ![AFDTN](https://github.com/mikel00per/MC/blob/master/Practicas/AFDTN.png)
+  ![AFDTN](https://github.com/mikel00per/MC/blob/master/Prácticas/AFDTN.png)
 
 Usando jFlap el resultado sería el siguiente:
 
-  ![AFNDTN](https://github.com/mikel00per/MC/blob/master/Practicas/AFNDTN.png)
+  ![AFNDTN](https://github.com/mikel00per/MC/blob/master/Prácticas/AFNDTN.png)
 
  * * * * *
 
-# 3. Practica 3 | Lex (Expresiones regulares)
+# 3. Práctica 3 | Lex (Expresiones regulares)
 Crear un fichero Lex con código mostrado en el tema dos y comprobar que
 funciona correctamente.
 
@@ -166,12 +166,12 @@ Mi fichero de ejemplo será una sucesión de productos a las que llamo "algo" y 
 
 Con este fichero la salida sería la siguiente:
 
-  ![salida_lex](https://github.com/mikel00per/MC/blob/master/Practicas/salida_lex.png)
+  ![salida_lex](https://github.com/mikel00per/MC/blob/master/Prácticas/salida_lex.png)
 
 
 * * * * *
 
-# 4. Practica 4 | A.P → Gramática
+# 4. Práctica 4 | A.P → Gramática
 Obtener la gramatica libre del contexto del autómata con pila vacia siendo:
 
     M = ({q1,q2}, {0,1}, {R,X}, δ, q1, R, 0)

@@ -1,11 +1,11 @@
 # Examen de MC 2017/2018
 
 ## Pregunta 1
-ADF que reconoce cadenas..
+Contruir el AFD que acepte palabras con 1's y 0's con:
 
-  - a) Con un número par de 0 y 1.
-  - b) Expresión regular
-  - c) AFND para cadenas del b)
+  - a) Un número par de 0's.
+  - b) Expresión regular con número para de 0's y 1's.
+  - c) AFND para cadenas del apartado b) y poner algún ejemplo de uso.
 
     Sin hacer aún.
 
